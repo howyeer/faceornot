@@ -6,7 +6,17 @@ import os
 import cv2
 from PIL import Image
 
-
+train_data = []
+train_label = []
+with open("D:/aaacode/faceornot/train_data.csv", 'r')as f, \
+     open("D:/aaacode/faceornot/train_label.csv", 'r')as l:
+    reader_f = csv.reader(f)
+    reader_l = csv.reader(l)
+    for row in reader_f:
+        train_data.append(row)
+        print(len(row))
+    for label in reader_l:
+        train_label.append(label)
 
 
 '''
