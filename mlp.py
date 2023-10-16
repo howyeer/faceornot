@@ -112,9 +112,9 @@ for n in range(group_num):
                     acc += 1
             print("acc={}".format(acc/i))
             acc_list[n].append(acc/i)
-print(acc_list)
+print("分组准确率：",acc_list)
 for k in range(group_num):
     acc_array = np.zeros_like(np.array(acc_list[0]))
     acc_array += np.array(acc_list[k]) 
     acc_array = acc_array/group_num
-print(acc_array)
+print("平均准确率：",acc_array)
